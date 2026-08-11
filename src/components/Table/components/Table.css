@@ -269,23 +269,27 @@
   border-top: 1px solid color-mix(in oklab, var(--border) 80%, transparent);
 }
 
-.table-grid {
+.table-grid,
+.grid-table-wrapper {
   overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--border) transparent;
 }
 
-.table-grid::-webkit-scrollbar {
+.table-grid::-webkit-scrollbar,
+.grid-table-wrapper::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-.table-grid::-webkit-scrollbar-thumb {
+.table-grid::-webkit-scrollbar-thumb,
+.grid-table-wrapper::-webkit-scrollbar-thumb {
   border-radius: 999px;
   background: var(--border);
 }
 
-.table-grid-table {
+.table-grid-table,
+.grid-table {
   width: 100%;
   min-width: 980px;
   border-collapse: collapse;
@@ -307,6 +311,8 @@
   display: block;
   width: 100%;
   padding-right: 1.25rem;
+  border: 0;
+  background: transparent;
   color: inherit;
   font: inherit;
   text-align: inherit;
@@ -317,24 +323,34 @@
   position: absolute;
   top: 50%;
   right: 0;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.02rem;
   width: 0.9rem;
+  height: 1rem;
   transform: translateY(-50%);
   color: color-mix(in oklab, var(--foreground) 72%, transparent);
-  font-size: 0.45rem;
-  line-height: 1;
+  pointer-events: none;
 }
 
 .grid-header-sort-arrow {
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 100%;
+  font-size: 0.45rem;
+  line-height: 1;
+  text-align: center;
+  transform: translateX(-50%);
   opacity: 0.28;
   transition:
     opacity 160ms ease,
-    color 160ms ease,
-    transform 160ms ease;
+    color 160ms ease;
+}
+
+.grid-header-sort-arrow-up {
+  top: 0;
+}
+
+.grid-header-sort-arrow-down {
+  bottom: 0;
 }
 
 .grid-header-sort-arrow-active {

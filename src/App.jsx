@@ -1,7 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home/components/Home.jsx'
-import OwnersPage from './pages/Owners/components/OwnersPage.jsx'
-import CategoriesPage from './pages/Categories/components/CategoriesPage.jsx'
+import Home from './pages/Home/Home.jsx'
+import OwnersPage from './pages/Owners/OwnersPage.jsx'
+import CategoriesPage from './pages/Categories/CategoriesPage.jsx'
 
 function App() {
   return (

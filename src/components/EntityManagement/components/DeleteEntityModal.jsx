@@ -1,16 +1,24 @@
-import ModalShell from '../ModalShell/components/ModalShell.jsx'
-import './DeleteRecordModal.css'
+import ModalShell from '../../ModalShell/components/ModalShell.jsx'
+import '../../AddRecordModal/components/AddRecordModal.css'
+import '../../DeleteRecordModal/DeleteRecordModal.css'
 
-function DeleteRecordModal({ open, record, pending, serverError, onClose, onConfirm }) {
+function DeleteEntityModal({
+  open,
+  entityLabel,
+  item,
+  pending,
+  serverError,
+  onClose,
+  onConfirm,
+}) {
   return (
     <ModalShell
       open={open}
       onClose={onClose}
-      title="Delete Record"
+      title={`Delete ${entityLabel}`}
       size="sm"
       tone="destructive"
-      eyebrow={record?.rawId ? `System ID: ${record.rawId}` : undefined}
-      description="Aceasta actiune sterge definitiv inregistrarea din backend si nu poate fi anulata."
+      description="This permanently removes the entry. Existing records keep their current value."
       contentClassName="delete-record-modal"
       footer={
         <div className="record-modal-actions">
@@ -19,7 +27,7 @@ function DeleteRecordModal({ open, record, pending, serverError, onClose, onConf
             className="record-modal-button record-modal-button-secondary"
             onClick={onClose}
           >
-            Keep Record
+            Keep it
           </button>
 
           <button
@@ -28,16 +36,13 @@ function DeleteRecordModal({ open, record, pending, serverError, onClose, onConf
             onClick={onConfirm}
             disabled={pending}
           >
-            {pending ? 'Deleting...' : 'Delete Permanently'}
+            {pending ? 'Deleting...' : 'Delete permanently'}
           </button>
         </div>
       }
     >
       <div className="delete-record-summary">
-        <p className="delete-record-title">{record?.content ?? 'Unknown record'}</p>
-        <p className="delete-record-meta">
-          {[record?.category, record?.owner, record?.status].filter(Boolean).join(' · ')}
-        </p>
+        <p className="delete-record-title">{item?.name ?? `Unknown ${entityLabel}`}</p>
       </div>
 
       {serverError ? (
@@ -49,4 +54,4 @@ function DeleteRecordModal({ open, record, pending, serverError, onClose, onConf
   )
 }
 
-export default DeleteRecordModal
+export default DeleteEntityModal
