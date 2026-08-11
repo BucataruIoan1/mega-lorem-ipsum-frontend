@@ -1,0 +1,77 @@
+.add-record-modal .modal-shell-title {
+  color: color-mix(in oklab, var(--foreground) 92%, white 8%);
+}
+
+.add-record-modal .modal-shell-description {
+  max-width: 34rem;
+}
+
+.record-modal-form {
+  margin: 0;
+}
+
+.record-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.record-modal-button {
+  min-width: 10rem;
+  padding: 0.9rem 1.3rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    filter 160ms ease,
+    opacity 160ms ease,
+    border-color 160ms ease;
+}
+
+.record-modal-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.record-modal-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.record-modal-button-secondary {
+  border: 1px solid color-mix(in oklab, var(--border) 82%, transparent);
+  background: color-mix(in oklab, var(--background) 38%, transparent);
+  color: var(--muted-foreground);
+}
+
+.record-modal-button-secondary:hover:not(:disabled) {
+  border-color: color-mix(in oklab, var(--primary) 34%, transparent);
+  color: var(--foreground);
+}
+
+.record-modal-button-primary {
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in oklab, var(--primary) 90%, white 10%),
+      color-mix(in oklab, var(--primary) 65%, var(--glow) 35%)
+    );
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-glow);
+}
+
+.record-modal-button-primary:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+@media (max-width: 767px) {
+  .record-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .record-modal-button {
+    width: 100%;
+  }
+}

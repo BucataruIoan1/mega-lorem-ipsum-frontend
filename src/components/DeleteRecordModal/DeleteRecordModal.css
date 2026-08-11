@@ -1,0 +1,42 @@
+.delete-record-modal .modal-shell-description {
+  max-width: 28rem;
+}
+
+.delete-record-summary {
+  padding: 1rem;
+  border: 1px solid color-mix(in oklab, var(--destructive) 24%, transparent);
+  border-radius: var(--radius-xl);
+  background: color-mix(in oklab, var(--destructive) 8%, transparent);
+}
+
+.delete-record-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.delete-record-meta {
+  margin: 0.45rem 0 0;
+  color: var(--muted-foreground);
+  font-size: 0.82rem;
+}
+
+.delete-record-alert {
+  margin: 1rem 0 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid color-mix(in oklab, var(--destructive) 28%, transparent);
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklab, var(--destructive) 10%, transparent);
+  color: color-mix(in oklab, var(--foreground) 84%, var(--destructive) 16%);
+  font-size: 0.86rem;
+}
+
+.record-modal-button-destructive {
+  background: color-mix(in oklab, var(--destructive) 90%, white 10%);
+  color: var(--primary-foreground);
+}
+
+.record-modal-button-destructive:hover:not(:disabled) {
+  filter: brightness(1.06);
+}

@@ -1,8 +1,18 @@
-import './App.css'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home/components/Home.jsx'
+import OwnersPage from './pages/Owners/components/OwnersPage.jsx'
+import CategoriesPage from './pages/Categories/components/CategoriesPage.jsx'
 
 function App() {
   return (
-    <h1>Mega Lorem Ipsum</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/records" replace />} />
+        <Route path="/records" element={<Home />} />
+        <Route path="/owners" element={<OwnersPage />} />
+        <Route path="/categories" element={<CategoriesPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

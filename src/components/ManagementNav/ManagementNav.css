@@ -1,0 +1,70 @@
+.management-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.management-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid color-mix(in oklab, var(--border) 84%, transparent);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--background) 62%, transparent);
+  color: var(--muted-foreground);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.management-nav-link:hover {
+  color: var(--foreground);
+  border-color: color-mix(in oklab, var(--primary) 42%, transparent);
+  transform: translateY(-1px);
+}
+
+.management-nav-link-active {
+  color: var(--primary-foreground);
+  border-color: color-mix(in oklab, var(--primary) 54%, transparent);
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in oklab, var(--primary) 90%, white 10%),
+      color-mix(in oklab, var(--primary) 65%, var(--glow) 35%)
+    );
+  box-shadow: var(--shadow-glow);
+}
+
+.management-nav-icon {
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+}
+
+.management-nav-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .management-nav {
+    gap: 0.6rem;
+  }
+
+  .management-nav-link {
+    justify-content: center;
+    flex: 1 1 calc(50% - 0.6rem);
+    min-width: 0;
+    padding: 0.72rem 0.9rem;
+    letter-spacing: 0.1em;
+  }
+}

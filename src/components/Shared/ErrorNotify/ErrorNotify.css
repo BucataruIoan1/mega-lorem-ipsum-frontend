@@ -1,0 +1,57 @@
+.error-notify {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 220;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  max-width: calc(100vw - 32px);
+  margin: 0 auto;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in oklab, var(--destructive) 48%, transparent);
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--destructive) 88%, white 12%),
+    color-mix(in oklab, var(--destructive) 70%, black 30%)
+  );
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
+  color: #fff;
+}
+
+.error-notify-icon {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-notify-message {
+  min-width: 0;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 521px) {
+  .error-notify {
+    bottom: 24px;
+    max-width: min(32rem, calc(100vw - 48px));
+    padding: 12px 18px;
+  }
+
+  .error-notify-message {
+    white-space: nowrap;
+  }
+}

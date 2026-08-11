@@ -1,0 +1,7 @@
+.edit-record-modal .modal-shell-title {
+  color: color-mix(in oklab, var(--foreground) 94%, white 6%);
+}
+
+.edit-record-modal .modal-shell-eyebrow {
+  color: color-mix(in oklab, var(--glow) 78%, white 22%);
+}
