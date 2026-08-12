@@ -1,32 +1,5 @@
-function EditIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M4 20h4l10-10-4-4L4 16v4zm11-13l4 4"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.7"
-      />
-    </svg>
-  )
-}
-
-function DeleteIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M5 7h14M9 7V5h6v2m-7 3v7m4-7v7m4-7v7M8 20h8a1 1 0 001-1V7H7v12a1 1 0 001 1z"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.6"
-      />
-    </svg>
-  )
-}
+import DeleteIcon from '../../Shared/DeleteIcon/DeleteIcon.tsx'
+import EditIcon from '../../Shared/EditIcon/EditIcon.tsx'
 
 function ActionsCell({ row, onEdit, onDelete }) {
   return (

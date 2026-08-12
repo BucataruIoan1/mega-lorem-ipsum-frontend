@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useIsMobile } from '../../../hooks/useIsMobile.js'
+import DeleteIcon from '../../Shared/DeleteIcon/DeleteIcon.tsx'
+import EditIcon from '../../Shared/EditIcon/EditIcon.tsx'
+import PlusIcon from '../../Shared/PlusIcon/PlusIcon.tsx'
 import SuccessNotify from '../../Shared/SuccessNotify/SuccessNotify.tsx'
 import ErrorNotify from '../../Shared/ErrorNotify/ErrorNotify.tsx'
 import ManagementNav from '../../ManagementNav/ManagementNav.jsx'
@@ -7,51 +10,6 @@ import EntityFormModal from './EntityFormModal.jsx'
 import DeleteEntityModal from './DeleteEntityModal.jsx'
 import useEntityManagement from '../hooks/useEntityManagement.js'
 import './EntityManagementPage.css'
-
-function PlusIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M12 5v14M5 12h14"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.75"
-      />
-    </svg>
-  )
-}
-
-function EditIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M4 20h4l10-10-4-4L4 16v4zm11-13l4 4"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.7"
-      />
-    </svg>
-  )
-}
-
-function DeleteIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M5 7h14M9 7V5h6v2m-7 3v7m4-7v7m4-7v7M8 20h8a1 1 0 001-1V7H7v12a1 1 0 001 1z"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.6"
-      />
-    </svg>
-  )
-}
 
 function EntityManagementPage({
   entityKey,

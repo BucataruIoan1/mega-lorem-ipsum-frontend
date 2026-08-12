@@ -7,6 +7,9 @@ import AddRecordModal from '../../AddRecordModal/components/AddRecordModal.jsx'
 import BulkLoremModal from '../../BulkLoremModal/components/BulkLoremModal.jsx'
 import DeleteRecordModal from '../../DeleteRecordModal/DeleteRecordModal.jsx'
 import EditRecordModal from '../../EditRecordModal/components/EditRecordModal.jsx'
+import PeopleIcon from '../../Shared/PeopleIcon/PeopleIcon.tsx'
+import SparklesIcon from '../../Shared/SparklesIcon/SparklesIcon.tsx'
+import TagIcon from '../../Shared/TagIcon/TagIcon.tsx'
 import SuccessNotify from '../../Shared/SuccessNotify/SuccessNotify.tsx'
 import ErrorNotify from '../../Shared/ErrorNotify/ErrorNotify.tsx'
 import { useIsMobile } from '../../../hooks/useIsMobile.js'
@@ -15,60 +18,6 @@ import useTable from '../hooks/useTable.js'
 import TABLE_COLUMNS from './TableColumns.jsx'
 
 import './Table.css'
-
-function PeopleIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-      <circle cx="9" cy="7" r="4" />
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-    </svg>
-  )
-}
-
-function TagIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M20.59 13.41 11 3.83V3H4v7h.83l9.58 9.59a2 2 0 0 0 2.82 0l3.36-3.36a2 2 0 0 0 0-2.82Z" />
-      <circle cx="7.5" cy="6.5" r="1" />
-    </svg>
-  )
-}
-
-function SparklesIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="m12 3-1.4 3.6L7 8l3.6 1.4L12 13l1.4-3.6L17 8l-3.6-1.4L12 3Z" />
-      <path d="m5 14-.9 2.1L2 17l2.1.9L5 20l.9-2.1L8 17l-2.1-.9L5 14Z" />
-      <path d="m19 13-.7 1.3L17 15l1.3.7L19 17l.7-1.3L21 15l-1.3-.7L19 13Z" />
-    </svg>
-  )
-}
 
 function Table() {
   const {
